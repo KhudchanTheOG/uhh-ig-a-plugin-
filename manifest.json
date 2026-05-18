@@ -1,0 +1,14 @@
+{
+    "name": "UltraZoomOut",
+    "description": "Allows Discord zoom below 75%",
+    "authors": [
+        {
+            "name": "Nm",
+            "id": "1337"
+        }
+    ],
+    "main": "index.js",
+    "vendetta": {
+        "icon": "ic_analytics_24px"
+    }
+}
