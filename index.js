@@ -3,7 +3,7 @@ const { after } = vendetta.patcher;
 
 let unpatch;
 
-export default {
+module.exports = {
     onLoad() {
         try {
             const AccessibilityStore = findByProps(
@@ -17,13 +17,13 @@ export default {
             }
 
             unpatch = after(
-                "setZoom",
                 AccessibilityStore,
+                "setZoom",
                 (args) => {
                     const zoom = args[0];
 
                     if (zoom < 0.75) {
-                        AccessibilityStore.setZoom(0.5);
+                        args[0] = 0.5;
                     }
                 }
             );
@@ -36,6 +36,7 @@ export default {
 
     onUnload() {
         if (unpatch) unpatch();
+
         console.log("[UltraZoomOut] Unloaded");
     }
 };
