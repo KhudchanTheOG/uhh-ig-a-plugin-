@@ -8,7 +8,7 @@
     }
   ],
   "main": "index.js",
-  "remote": "https://khudchantheog.github.io/uhh-ig-a-plugin-/index.js",
+  "remote": "https://raw.githubusercontent.com/KhudchanTheOG/uhh-ig-a-plugin-/main/index.js",
   "vendetta": {
     "icon": "ic_analytics_24px"
   }
